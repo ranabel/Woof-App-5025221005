@@ -61,6 +61,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.woof.data.Dog
 import com.example.woof.data.dogs
 import com.example.woof.ui.theme.WoofTheme
+import androidx.compose.material3.CardDefaults
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -112,7 +113,10 @@ fun DogItem(
 ) {
     var expanded by remember { mutableStateOf(false) }
     Card(
-        modifier = modifier
+        modifier = modifier,
+//        colors = CardDefaults.cardColors(
+//            containerColor = MaterialTheme.colorScheme.surface // ← Tambahkan ini
+//        )
     ) {
         Column(
             modifier = Modifier
